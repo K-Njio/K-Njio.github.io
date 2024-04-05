@@ -11,13 +11,13 @@
 /* header container*/
 .container-fluid:nth-child(1) {
     background-color: var(--red);
-    color: var(--text-color);
 }
 
 /* main container */
 .container-fluid:nth-child(2) {
     background-color: var(--black);
-    min-height: 500px;
+    color: var(--pink-red);
+    min-height: 500px; 
 }
 
 /* footer container */
@@ -27,19 +27,31 @@
     min-height: 350px;
 }
 
-.nav-hd {
-    padding: 10px;
+
+
+/* header */
+
+.logo-hd{
+    height: 50px;
+    /* display: flex;
+    justify-content: center; */
 }
 
-.container-fluid {
-    color: var(--pink-red);
+nav{
+    float: right;
+    display: flex;
+    justify-content: center;
 }
 
-.col-md-4 {
+a{
+    text-decoration: none;
+    background-color: var(--red);
+    color: var(--text-color);
+    padding: 20px;
+    width: 200px;
     text-align: center;
 }
-
-.logo-container{
+.logo-container-ft{
     text-align: center;
 }
 
