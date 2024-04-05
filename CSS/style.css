@@ -1,0 +1,21 @@
+.container-fluid{
+    background-color: aquamarine;
+    border: 1px solid black;
+    width: 500px;
+    height: 50px;
+}
+
+.container-md{
+    background-color: aquamarine;
+    border: 1px solid black;
+    width: 100%;
+    height: 50px;
+}
+
+.col-md-4{
+    text-align: center;
+}
+
+.logo-ft{
+    text-align: center;
+}
