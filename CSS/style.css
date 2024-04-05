@@ -1,3 +1,14 @@
+:root {
+    --red: #C3073F;
+    --btn-hover: #e71f5b;
+    --pink-red: #950740;
+    --maroon: #6f2232;
+    --navy-blue: #001B79;
+    --black: #1A1A1D;
+    --text-color: white;
+}
+
+
 .container-fluid{
     background-color: aquamarine;
     border: 1px solid black;
