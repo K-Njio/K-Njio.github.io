@@ -8,11 +8,27 @@
     --text-color: white;
 }
 
+header,footer{
+    background-color: var(--red);
+}
+
+header{
+    color: var(--text-color);
+}
+
+main{
+    background-color: var(--black);
+}
+
+footer{
+    color: var(--navy-blue);
+}
+
 
 .container-fluid{
     background-color: aquamarine;
+    color: var(--pink-red);
     border: 1px solid black;
-    width: 500px;
     height: 50px;
 }
 
@@ -28,5 +44,17 @@
 }
 
 .logo-ft{
+    text-align: center;
+}
+
+.name-ft{
+    text-align: center;
+}
+
+.quote{
+    text-align: center;
+}
+
+.nav-ft{
     text-align: center;
 }
