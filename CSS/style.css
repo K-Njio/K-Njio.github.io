@@ -116,3 +116,7 @@ margin-top: 30px;
     text-align: center;
     padding: 20px;
 }
+
+.contact-main{
+ max-height: 100%;
+}
