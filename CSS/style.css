@@ -87,45 +87,19 @@ font-size: 26px;
     margin-top: 60px;
 }
 
-
 .over-mij-button:hover {
     background-color: var(--btn-hover);
     color: var(--navy-blue);
 }
 
 /* footer */
-.logo-container-ft{
-    text-align: center;
-}
-
 .logo-ft {
 height: 100px;
 margin-top: 30px;
 }
 
-.name-ft {
-    text-align: center;
-}
-
-.quote {
-    text-align: center;
-    padding: 10px;
-}
-
-.nav-ft {
-    text-align: center;
-    padding: 20px;
-}
-
-.contact-main{
- max-height: 100%;
-}
-
-
 /* progress bar */
   .progress-bar {
-    /* height: 10px; */
     background: var(--navy-blue);
-
   }
 
