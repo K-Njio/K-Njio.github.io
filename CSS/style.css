@@ -55,13 +55,6 @@ color: var(--navy-blue);
     background-color: var(--btn-hover);
 }
 
-nav{
-    /* float: right; */
-    /* display: flex; */
-    /* justify-content: center; */
-}
-
-
 .font-hd, .font-ft{
 font-size: 26px;
 }
