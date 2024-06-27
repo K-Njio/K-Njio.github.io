@@ -38,8 +38,7 @@
 
 .logo-hd{
     height: 50px;
-    /* display: flex;
-    justify-content: center; */
+
 }
 
 .a-hd{
@@ -86,4 +85,9 @@ font-size: 26px;
 /* progress bar */
   .progress-bar {
     background: var(--navy-blue);
+  }
+
+  .mn-i, .mn-i:visited{
+    font-size: 40px;
+    color: var(--pink-red);
   }
