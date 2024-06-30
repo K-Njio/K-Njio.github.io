@@ -1,4 +1,4 @@
-*{
+* {
     margin: 0px;
     padding: 0px;
     box-sizing: border-box;
@@ -24,7 +24,7 @@
 .container-fluid:nth-child(2) {
     background-color: var(--black);
     color: var(--pink-red);
-    min-height: 500px; 
+    min-height: 500px;
 }
 
 /* footer container */
@@ -36,17 +36,18 @@
 
 /* header */
 
-.logo-hd{
+.logo-hd {
     height: 50px;
 
 }
 
-.a-hd{
+.a-hd {
     color: var(--text-color);
 }
 
-.active, .a-ft{
-color: var(--navy-blue);
+.active,
+.a-ft {
+    color: var(--navy-blue);
 }
 
 .a-hd:hover {
@@ -54,8 +55,9 @@ color: var(--navy-blue);
     background-color: var(--btn-hover);
 }
 
-.font-hd, .font-ft{
-font-size: 26px;
+.font-hd,
+.font-ft {
+    font-size: 26px;
 }
 
 .a:hover {
@@ -83,11 +85,16 @@ font-size: 26px;
 }
 
 /* progress bar */
-  .progress-bar {
+.progress-bar {
     background: var(--navy-blue);
-  }
+}
 
-  .mn-i, .mn-i:visited{
-    font-size: 40px;
+.mn-i,
+.mn-i:visited {
+    font-size: 60px;
     color: var(--pink-red);
-  } 
+}
+
+.mn-i:hover {
+    color: var(--navy-blue-hover);
+}
