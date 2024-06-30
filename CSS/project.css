@@ -2,19 +2,6 @@
     --e: cubic-bezier(0.19, 1, 0.22, 1);
   }
 
-  
-  @media (min-width: 600px) {
-    .pagina-inhoud {
-      grid-template-columns: repeat(2, 1fr);
-    }
-  }
-  
-  @media (min-width: 800px) {
-    .pagina-inhoud {
-      grid-template-columns: repeat(4, 1fr);
-    }
-  }
-  
   .content {  
     position: relative;
     overflow: hidden;
@@ -26,6 +13,7 @@
       0 4px 4px rgba(255, 0, 0, 0.1), 
       0 8px 8px rgba(255, 0, 0, 0.1),
       0 16px 16px rgba(255, 0, 0, 0.1);
+      min-height: 500px;
   }
   
 
@@ -53,28 +41,28 @@
     pointer-events: none;
     background-image: linear-gradient(
       to bottom,
-      hsla(0, 100%, 50%, 0) 0%,
-      hsla(0, 100%, 50%, 0.009) 11.7%,
-      hsla(0, 100%, 50%, 0.034) 22.1%,
-      hsla(0, 100%, 50%, 0.072) 31.2%,
-      hsla(0, 100%, 50%, 0.123) 39.4%,
-      hsla(0, 100%, 50%, 0.182) 46.6%,
-      hsla(0, 100%, 50%, 0.249) 53.1%,
-      hsla(0, 100%, 50%, 0.32) 58.9%,
-      hsla(0, 100%, 50%, 0.394) 64.3%,
-      hsla(0, 100%, 50%, 0.468) 69.3%,
-      hsla(0, 100%, 50%, 0.54) 74.1%,
-      hsla(0, 100%, 50%, 0.607) 78.8%,
-      hsla(0, 100%, 50%, 0.668) 83.6%,
-      hsla(0, 100%, 50%, 0.721) 88.7%,
-      hsla(0, 100%, 50%, 0.762) 94.1%,
-      hsla(0, 100%, 50%, 0.79) 100%
+      rgb(195, 7, 63, 0.00) 0%,
+      rgba(195, 7, 63, 0.009) 11.7%,
+      rgba(195, 7, 63, 0.034) 22.1%,
+      rgba(195, 7, 63, 0.072) 31.2%,
+      rgba(195, 7, 63, 0.123) 39.4%,
+      rgba(195, 7, 63, 0.182) 46.6%,
+      rgba(195, 7, 63, 0.249) 53.1%,
+      rgba(195, 7, 63, 0.32) 58.9%,
+      rgba(195, 7, 63, 0.394) 64.3%,
+      rgba(195, 7, 63, 0.468) 69.3%,
+      rgba(195, 7, 63, 0.54) 74.1%,
+      rgba(195, 7, 63, 0.607) 78.8%,
+      rgba(195, 7, 63, 0.668) 83.6%,
+      rgba(195, 7, 63,0.721) 88.7%,
+      rgba(195, 7, 63, 0.762) 94.1%,
+      rgba(195, 7, 63, 0.79) 100%
     );
     transform: translateY(-50%);
     transition: transform calc((900ms) * 2) var(--e);
   }
   
-  .inhoud {
+  .text-project {
     position: relative;
     display: flex;
     flex-direction: column;
@@ -89,7 +77,7 @@
     font-size: 30px;
   }
   
-  .decription {
+  .dec {
     font-style: italic;
     line-height: 1.35;
   }
@@ -105,7 +93,7 @@
       transform: translateY(0);
     }
     
-    .inhoud {
+    .text-project {
       transform: translateY(calc(100% - 4.5rem));
     }
     
@@ -116,7 +104,7 @@
       &::before { transform: translateY(-4%); }
       &::after { transform: translateY(-50%); }
   
-      .inhoud {
+      .text-project {
         transform: translateY(0);
       }
     }
@@ -124,7 +112,7 @@
     .content:focus-within {
       &::before,
       &::after,
-      .inhoud {
+      .text-project {
         transition-duration: 0s;
       }
     }
