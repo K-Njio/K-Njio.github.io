@@ -1,24 +1,27 @@
 :root {
+    /* variabel met de timing-functie voor animaties */
     --e: cubic-bezier(0.19, 1, 0.22, 1);
-  }
+    
+}
 
-  .content {  
+.content {
     position: relative;
     overflow: hidden;
     color: whitesmoke;
     background-color: black;
-    /* schaduw kaart */
-    box-shadow: 0 1px 1px rgba(255, 0, 0, 0.1), 
-      0 2px 2px rgba(0,0,0,0.1), 
-      0 4px 4px rgba(255, 0, 0, 0.1), 
-      0 8px 8px rgba(255, 0, 0, 0.1),
-      0 16px 16px rgba(255, 0, 0, 0.1);
-      min-height: 500px;
-  }
-  
+    /* Buitenkant schaduw kaart */
+    box-shadow: 0 1px 1px rgba(255, 0, 0, 0.1),
+        0 20px 2px rgba(0, 0, 0, 0.1),
+        0 4px 4px rgba(255, 0, 0, 0.1),
+        0 8px 8px rgba(255, 0, 0, 0.1),
+        0 16px 16px rgba(255, 0, 0, 0.1);
+    min-height: 475px; 
+    /* Zorg ervoor dat alle kaarten dezelfde hoogte hebben */
+    height: 500px;
+}
 
-  /* achtergrond kaart */
-  .content::before {
+/* Achtergrond kaart */
+.content::before {
     content: '';
     position: absolute;
     top: 0;
@@ -26,11 +29,12 @@
     width: 100%;
     height: 110%;
     background-size: cover;
+    /* Achtergrond transformatie */
     transition: transform calc((800ms) * 1.5) var(--e);
-  }
-  
-  /* transition tekst en schaduw */
-  .content::after {
+}
+
+/* Transition tekst en schaduw */
+.content::after {
     content: '';
     display: block;
     position: absolute;
@@ -39,82 +43,136 @@
     width: 100%;
     height: 200%;
     pointer-events: none;
-    background-image: linear-gradient(
-      to bottom,
-      rgb(195, 7, 63, 0.00) 0%,
-      rgba(195, 7, 63, 0.009) 11.7%,
-      rgba(195, 7, 63, 0.034) 22.1%,
-      rgba(195, 7, 63, 0.072) 31.2%,
-      rgba(195, 7, 63, 0.123) 39.4%,
-      rgba(195, 7, 63, 0.182) 46.6%,
-      rgba(195, 7, 63, 0.249) 53.1%,
-      rgba(195, 7, 63, 0.32) 58.9%,
-      rgba(195, 7, 63, 0.394) 64.3%,
-      rgba(195, 7, 63, 0.468) 69.3%,
-      rgba(195, 7, 63, 0.54) 74.1%,
-      rgba(195, 7, 63, 0.607) 78.8%,
-      rgba(195, 7, 63, 0.668) 83.6%,
-      rgba(195, 7, 63,0.721) 88.7%,
-      rgba(195, 7, 63, 0.762) 94.1%,
-      rgba(195, 7, 63, 0.79) 100%
-    );
+    background-image: linear-gradient(to bottom,
+            rgb(195, 7, 63, 0.00) 0%,
+            rgba(195, 7, 63, 0.009) 11.7%,
+            rgba(195, 7, 63, 0.034) 22.1%,
+            rgba(195, 7, 63, 0.072) 31.2%,
+            rgba(195, 7, 63, 0.123) 39.4%,
+            rgba(195, 7, 63, 0.182) 46.6%,
+            rgba(195, 7, 63, 0.249) 53.1%,
+            rgba(195, 7, 63, 0.32) 58.9%,
+            rgba(195, 7, 63, 0.394) 64.3%,
+            rgba(195, 7, 63, 0.468) 69.3%,
+            rgba(195, 7, 63, 0.54) 74.1%,
+            rgba(195, 7, 63, 0.607) 78.8%,
+            rgba(195, 7, 63, 0.668) 83.6%,
+            rgba(195, 7, 63, 0.721) 88.7%,
+            rgba(195, 7, 63, 0.762) 94.1%,
+            rgba(195, 7, 63, 0.79) 100%);
+    /* Startpositie voor de achtergrondschaduw */
     transform: translateY(-50%);
+    /* Achtergrondschaduw transformatie */
     transition: transform calc((900ms) * 2) var(--e);
-  }
-  
-  .text-project {
-    position: relative;
+
+}
+
+.text-project {
+    position: absolute;
+    /* Plaats de tekst aan de onderkant van de kaart */
+    bottom: 0;
+    width: 100%;
+    padding: 1rem;
     display: flex;
     flex-direction: column;
     align-items: center;
-    width: 100%;
-    padding: 1rem;
+    /* Zet de items aan de onderkant van de container */
+    justify-content: flex-end;
+    /* Transformatie van de tekst */
     transition: transform 900ms var(--e);
+    /* Zorg ervoor dat de tekst bovenop andere elementen ligt */
     z-index: 1;
-  }
-  
-  h2{
+}
+
+.text-project h2 {
+    /* Pas deze waarde aan om de afstand tot de onderkant te bepalen */
+    margin-bottom: 20px;
+    /* Zorg ervoor dat de titel zichtbaar is */
+    opacity: 1;
+    /* Zorg ervoor dat de titel altijd zichtbaar is */
+    visibility: visible;
+
+}
+
+.text-project>*:not(h2) {
+    /* Verberg de andere elementen behalve h2 standaard */
+    opacity: 0;
+    /* Zorg ervoor dat de andere elementen geen ruimte innemen als ze verborgen zijn */
+    visibility: hidden;
+
+}
+
+.content:hover .text-project>* {
+    /* Toon alle elementen bij hover */
+    opacity: 1;
+    /* Zorg ervoor dat ze zichtbaar zijn bij hover */
+    visibility: visible;
+}
+
+h2 {
     font-size: 30px;
-  }
-  
-  .dec {
+    /* Zorg ervoor dat de titel zichtbaar is */
+    opacity: 1;
+    /* Zorg ervoor dat de titel altijd zichtbaar is */
+    visibility: visible;
+}
+
+.dec {
     font-style: italic;
-    line-height: 1.35;
-  }
-  
-  .btn-project {
+    /* line-height: 1.35; */
+}
+
+.btn-project {
     font-size: 12px;
     color: white;
     background-color: black;
-  }
-   
-  @media (hover: hover) and (min-width: 300px) {
+}
+
+@media (hover: hover) and (min-width: 300px) {
     .content::after {
-      transform: translateY(0);
+        /* Verplaats de achtergrondschaduw bij hover */
+        transform: translateY(0);
     }
-    
+
     .text-project {
-      transform: translateY(calc(100% - 4.5rem));
+        /* Vertaal de tekstpositie bij hover */
+        transform: translateY(calc(100% - 72px));
     }
-    
+
     .content:hover,
     .content:focus-within {
-      align-items: center;
-  
-      &::before { transform: translateY(-4%); }
-      &::after { transform: translateY(-50%); }
-  
-      .text-project {
-        transform: translateY(0);
-      }
+        align-items: center;
+
+        /* Verplaats de achtergrond bij hover */
+        &::before {
+            transform: translateY(-4%);
+        }
+
+        /* Verplaats de achtergrondschaduw bij hover */
+        &::after {
+            transform: translateY(-50%);
+        }
+
+        .text-project {
+            /* Vertaal de tekstpositie bij hover */
+            transform: translateY(0);
+        }
+
+        .text-project>* {
+            /* Toon alle elementen bij hover */
+            opacity: 1;
+            /* Zorg ervoor dat ze zichtbaar zijn bij hover */
+            visibility: visible;
+        }
     }
-    
+
     .content:focus-within {
-      &::before,
-      &::after,
-      .text-project {
-        transition-duration: 0s;
-      }
+
+        &::before,
+        &::after,
+        .text-project {
+            /* Geen transitie bij focus */
+            transition-duration: 0s;
+        }
     }
-  }
-  
+}
