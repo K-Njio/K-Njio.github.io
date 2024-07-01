@@ -16,7 +16,7 @@
 }
 
 /* bugg verticale scrollbar opgelost. */
-body, html {
+body {
     overflow-x: hidden; /* Dit voorkomt horizontale scrollbars */
 }
 
