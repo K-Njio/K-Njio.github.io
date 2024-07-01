@@ -15,6 +15,11 @@
     --text-color: white;
 }
 
+/* bugg verticale scrollbar opgelost. */
+body, html {
+    overflow-x: hidden; /* Dit voorkomt horizontale scrollbars */
+}
+
 /* header container*/
 .container-fluid:nth-child(1) {
     background-color: var(--red);
